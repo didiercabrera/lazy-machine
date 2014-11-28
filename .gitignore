@@ -1,0 +1,14 @@
+/node_modules/
+/.idea/
+/min/
+/js/
+sh.exe.stackdump
+*.orig
+*.komodoproject
+nbproject
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*~
+npm-debug.log
