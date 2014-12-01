@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+	<head>
+		<title>My App</title>
+		<script type="text/javascript" src="angular.min.js"></script>
+		<script type="text/javascript" src="../src/angular-lazy-machine.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<script type="text/javascript" src="jquery-2.1.1.min.js"></script>
+		<style type="text/css">
+			.container{
+				position: absolute;
+				left: 50%;
+				top:5%;
+				width: 50%;
+				max-height: 400px;
+				margin-left:-25%;
+				overflow-y: scroll;
+			}
+			.container div.item{
+				float: left;
+				width: 200px;
+				height: 200px;
+				border: solid;
+			}
+			.container img{
+				width: 100%;
+				height: 100%;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container" ng-controller='lazyController'>
+	        <div class="item" ng-repeat='image in priorityImages'>
+	        	<img lz-src="{{image}}" lz-priority='10'>
+	        </div>
+	        <div class="item" ng-repeat='image in batchImages'>
+	        	<img lz-src="{{image}}" lz-batch="batch_images">
+	        </div>	        
+		</div>		
+	</body>
+</html>
